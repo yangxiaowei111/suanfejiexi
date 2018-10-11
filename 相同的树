@@ -6,6 +6,9 @@
 #         self.right = None
 #         self.left = None
 #         self.right = None
+#         self.right = None
+#         self.left = None
+#         self.right = None
 
 class Solution:
     def isSameTree(self, p, q):
