@@ -1,0 +1,22 @@
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+-----------------------------------------------------------------------------------------
+class Solution:
+    def invertTree(self, root):
+        """
+        :type root: TreeNode
+        :rtype: TreeNode
+        """
+        if not root:
+            return root
+        root.left,root.right=self.invertTree(root.right),self.invertTree(root.left)
+        return root
+-----------------------------------------------------------------------------------------
+神奇的，漂亮的递归程序。
+递归的程序：判断节点是否为空，空的话返回空的节点。
+                      非空的话，判断节点的左右子树是否为空，一直到最后返回root,从而达到了交换左右树的目的，自下向上，逐步交换，
+最后返回根节点的值root
