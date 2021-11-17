@@ -1,0 +1,10 @@
+def maopao_sort(s):
+    for each_num in range(len(s)):
+        for each_num_01 in range(len(s)-each_num-1):
+            if s[each_num_01] >= s[each_num_01+1]:
+                s[each_num_01], s[each_num_01+1] = s[each_num_01+1], s[each_num_01]
+
+if __name__ == "__main__":
+    s = [111, 5, 7, 9, 3, 2, 1, 4, 6, 11, 45, 75]
+    maopao_sort(s)
+    print(s)
